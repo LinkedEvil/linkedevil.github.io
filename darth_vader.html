@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darth Vader | LinkedIn Feed Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="topbar-content">
+            <div class="logo-search">
+                <div class="logo">LinkedIn</div>
+                <input type="text" class="search-input" placeholder="Pesquisar...">
+            </div>
+            <nav class="topbar-nav">
+                <ul>
+                    <li>
+                        <div class="icon-menu"><i class="fas fa-home"></i></div>
+                        <span class="menu-label">Início</span>
+                    </li>
+                    <li>
+                        <div class="icon-menu"><i class="fas fa-user-friends"></i></div>
+                        <span class="menu-label">Minha Rede</span>
+                    </li>
+                    <li>
+                        <div class="icon-menu"><i class="fas fa-briefcase"></i></div>
+                        <span class="menu-label">Vagas</span>
+                    </li>
+                    <li>
+                        <div class="icon-menu"><i class="fas fa-comment-dots"></i></div>
+                        <span class="menu-label">Mensagens</span>
+                    </li>
+                    <li class="notification-item">
+                        <div class="icon-menu notification-icon">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">66</span>
+                        </div>
+                        <span class="menu-label">Notificações</span>
+                    </li>
+                </ul>
+            </nav>
+            <div class="topbar-profile">
+                <img src="https://static.wikia.nocookie.net/starwars/images/7/76/Darth_Vader.jpg" alt="Avatar" class="avatar-small">
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <main class="feed">
+            <section class="profile-header-card">
+                <div class="profile-header-bg"></div>
+                <div class="profile-header-content" style="flex-direction: column; align-items: flex-start; gap: 0; padding: 0 24px 16px 24px; margin-top: -60px;">
+                    <div class="profile-header-avatar">
+                        <img src="https://static.wikia.nocookie.net/starwars/images/7/76/Darth_Vader.jpg" alt="Darth Vader" class="avatar">
+                    </div>
+                    <div class="profile-header-info">
+                        <div class="profile-name">Darth Vader</div>
+                        <div class="profile-job">Sith Lord</div>
+                        <div class="profile-company"><i class="fas fa-empire"></i> Galactic Empire</div>
+                        <div class="profile-city">Death Star, Outer Rim</div>
+                    </div>
+                </div>
+                <div class="profile-header-actions">
+                    <button class="connect-btn">Conectar</button>
+                    <button class="message-btn">Mensagem</button>
+                </div>
+            </section>
+            <section class="profile-section">
+                <h2>Destaques</h2>
+                <ul>
+                    <li>Construtor e comandante da Estrela da Morte</li>
+                    <li>Responsável pela Ordem 66</li>
+                    <li>Maior duelista de sabre de luz do Império</li>
+                </ul>
+            </section>
+            <section class="profile-section">
+                <h2>Sobre</h2>
+                <p>Antigo Jedi, agora Lorde Sith. Comandante supremo das forças do Império Galáctico. Determinado, estratégico e implacável. "I find your lack of faith disturbing."</p>
+            </section>
+            <section class="profile-section">
+                <h2>Atividade</h2>
+                <ul>
+                    <li>Compartilhou: "Nova Estrela da Morte em construção!"</li>
+                    <li>Comentou: "A Força é poderosa em minha família."</li>
+                    <li>Repostou: "Promoção de stormtroopers do mês."</li>
+                </ul>
+            </section>
+            <section class="profile-section">
+                <h2>Experiência</h2>
+                <div class="experience-list">
+                    <div class="experience-item">
+                        <div class="experience-col-logo">
+                            <img src="img/EmpireLogo.png" alt="Galactic Empire" class="experience-logo">
+                        </div>
+                        <div class="experience-details">
+                            <div class="experience-role">Sith Lord</div>
+                            <div class="experience-company">Galactic Empire</div>
+                            <div class="experience-meta">19 BBY - presente &bull; Death Star, Outer Rim</div>
+                            <div class="experience-desc">Comandante supremo das forças do Império Galáctico. Responsável por estratégias militares, liderança de tropas e projetos de superarmas como a Estrela da Morte.</div>
+                        </div>
+                    </div>
+                    <div class="experience-divider"></div>
+                    <div class="experience-item">
+                        <div class="experience-col-logo">
+                            <img src="img/Jedi_Order_symbol.png" alt="Jedi Order" class="experience-logo">
+                        </div>
+                        <div class="experience-details">
+                            <div class="experience-role">Jedi Knight</div>
+                            <div class="experience-company">Jedi Order</div>
+                            <div class="experience-meta">até 19 BBY &bull; Coruscant</div>
+                            <div class="experience-desc">Atuação como Cavaleiro Jedi, defesa da República Galáctica, missões diplomáticas e treinamento em habilidades da Força e sabre de luz.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="profile-section">
+                <h2>Educação</h2>
+                <ul>
+                    <li>Jedi Temple, Coruscant</li>
+                    <li>Imperial Academy (honorário)</li>
+                </ul>
+            </section>
+            <section class="profile-section">
+                <h2>Habilidades</h2>
+                <ul>
+                    <li>Força (Force Choke, Telecinese, Precognição)</li>
+                    <li>Sabre de luz</li>
+                    <li>Liderança militar</li>
+                    <li>Engenharia de superarmas</li>
+                </ul>
+            </section>
+            <section class="profile-section">
+                <h2>Publicações</h2>
+                <ul>
+                    <li>"Como construir uma Estrela da Morte em 10 passos"</li>
+                    <li>"Gestão de equipes imperiais: lições do lado sombrio"</li>
+                </ul>
+            </section>
+            <section class="profile-section">
+                <h2>Honras e Prêmios</h2>
+                <ul>
+                    <li>Medalha Imperial de Excelência</li>
+                    <li>Reconhecimento Supremo do Imperador</li>
+                </ul>
+            </section>
+            <section class="profile-section">
+                <h2>Idiomas</h2>
+                <ul>
+                    <li>Básico Galáctico</li>
+                    <li>Sith</li>
+                    <li>Twi'leki (compreensão)</li>
+                </ul>
+            </section>
+            <section class="profile-section">
+                <h2>Interesses</h2>
+                <ul>
+                    <li>Engenharia de superarmas</li>
+                    <li>Política galáctica</li>
+                    <li>Tradições Sith</li>
+                    <li>Corridas de pods</li>
+                </ul>
+            </section>
+        </main>
+        <div class="sidebar-right-group">
+            <aside class="sidebar-right sidebar-box">
+                <h3>Sugestões do Império</h3>
+                <ul class="suggestions">
+                    <li>
+                        <img src="img/Palpatine-DB.png" alt="Palpatine">
+                        <span>Emperor Palpatine</span>
+                        <button>Conectar</button>
+                    </li>
+                    <li>
+                        <img src="img/Grand_Moff_Tarkin.png" alt="Tarkin">
+                        <span>Grand Moff Tarkin</span>
+                        <button>Conectar</button>
+                    </li>
+                </ul>
+            </aside>
+            <aside class="sidebar-promoted sidebar-box">
+                <h4>Conteúdo Promovido</h4>
+                <div class="promoted-item">
+                    <img src="img/DeathStar1.png" alt="Death Star">
+                    <div>
+                        <strong>Death Star Recruitment</strong>
+                        <p>Venha fazer parte do maior projeto do Império!</p>
+                        <a href="#" class="promoted-link">Saiba mais</a>
+                    </div>
+                </div>
+                <div class="promoted-item">
+                    <img src="img/Sithholocron2.png" alt="Sith Holocron">
+                    <div>
+                        <strong>Sith Holocron</strong>
+                        <p>Conheça os segredos do lado sombrio da Força.</p>
+                        <a href="#" class="promoted-link">Descubra</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

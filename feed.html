@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darth Vader | LinkedIn Feed Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="topbar-content">
+            <div class="logo-search">
+                <div class="logo">LinkedIn</div>
+                <input type="text" class="search-input" placeholder="Pesquisar...">
+            </div>
+            <nav class="topbar-nav">
+                <ul>
+                    <li>
+                        <div class="icon-menu"><i class="fas fa-home"></i></div>
+                        <span class="menu-label">Início</span>
+                    </li>
+                    <li>
+                        <div class="icon-menu"><i class="fas fa-user-friends"></i></div>
+                        <span class="menu-label">Minha Rede</span>
+                    </li>
+                    <li>
+                        <div class="icon-menu"><i class="fas fa-briefcase"></i></div>
+                        <span class="menu-label">Vagas</span>
+                    </li>
+                    <li>
+                        <div class="icon-menu"><i class="fas fa-comment-dots"></i></div>
+                        <span class="menu-label">Mensagens</span>
+                    </li>
+                    <li class="notification-item">
+                        <div class="icon-menu notification-icon">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">66</span>
+                        </div>
+                        <span class="menu-label">Notificações</span>
+                    </li>
+                </ul>
+            </nav>
+            <div class="topbar-profile">
+                <img src="https://static.wikia.nocookie.net/starwars/images/7/76/Darth_Vader.jpg" alt="Avatar" class="avatar-small">
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="sidebar-left-group">
+            <aside class="sidebar-left sidebar-box">
+                <div class="profile-bg"></div>
+                <div class="profile">
+                    <img src="https://static.wikia.nocookie.net/starwars/images/7/76/Darth_Vader.jpg" alt="Darth Vader" class="avatar">
+                    <div class="profile-info">
+                        <div class="profile-name">Darth Vader</div>
+                        <div class="profile-job">Sith Lord</div>
+                        <div class="profile-city">Death Star, Outer Rim</div>
+                        <div class="profile-company"><i class="fas fa-empire"></i>Galactic Empire</div>
+                    </div>
+                </div>
+            </aside>
+            <aside class="sidebar-left-extra sidebar-box">
+                <h4>Links Rápidos</h4>
+                <ul class="quick-links">
+                    <li><a href="#">Ordem 66</a></li>
+                    <li><a href="#">Imperial Academy</a></li>
+                    <li><a href="#">Death Star Projects</a></li>
+                    <li><a href="#">Sith Code</a></li>
+                </ul>
+            </aside>
+        </div>
+        <main class="feed">
+            <div class="new-post">
+                <img src="https://static.wikia.nocookie.net/starwars/images/7/76/Darth_Vader.jpg" alt="Darth Vader" class="avatar">
+                <div class="new-post-content">
+                    <textarea placeholder="Compartilhe seus pensamentos, Lord Vader..."></textarea>
+                    <button>Publicar</button>
+                </div>
+            </div>
+            <div id="posts">
+                <div class="post">
+                    <div class="post-header">
+                        <img src="https://static.wikia.nocookie.net/starwars/images/7/76/Darth_Vader.jpg" class="post-avatar" alt="Darth Vader">
+                        <div>
+                            <div class="post-author">Darth Vader</div>
+                            <div class="post-time">há 5 minutos</div>
+                        </div>
+                    </div>
+                    <div class="post-content">A fé em sua Força é perturbadoramente pequena. #Sith #GalacticEmpire</div>
+                    <div class="post-actions">
+                        <button><i class="fas fa-thumbs-up"></i> Curtir</button>
+                        <button><i class="fas fa-comment-dots"></i> Comentar</button>
+                        <button><i class="fas fa-retweet"></i> Re-postar</button>
+                        <button><i class="fas fa-share"></i> Compartilhar</button>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="post-header">
+                        <img src="https://static.wikia.nocookie.net/starwars/images/7/76/Darth_Vader.jpg" class="post-avatar" alt="Darth Vader">
+                        <div>
+                            <div class="post-author">Darth Vader</div>
+                            <div class="post-time">há 1 hora</div>
+                        </div>
+                    </div>
+                    <div class="post-content">Junte-se a mim e juntos dominaremos a galáxia como mestre e aprendiz. #Sith #Força</div>
+                    <div class="post-actions">
+                        <button><i class="fas fa-thumbs-up"></i> Curtir</button>
+                        <button><i class="fas fa-comment-dots"></i> Comentar</button>
+                        <button><i class="fas fa-retweet"></i> Re-postar</button>
+                        <button><i class="fas fa-share"></i> Compartilhar</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="sidebar-right-group">
+            <aside class="sidebar-right sidebar-box">
+                <h3>Sugestões do Império</h3>
+                <ul class="suggestions">
+                    <li>
+                        <img src="img/Palpatine-DB.png" alt="Palpatine">
+                        <span>Emperor Palpatine</span>
+                        <button>Conectar</button>
+                    </li>
+                    <li>
+                        <img src="img/Grand_Moff_Tarkin.png" alt="Tarkin">
+                        <span>Grand Moff Tarkin</span>
+                        <button>Conectar</button>
+                    </li>
+                </ul>
+            </aside>
+            <aside class="sidebar-promoted sidebar-box">
+                <h4>Conteúdo Promovido</h4>
+                <div class="promoted-item">
+                    <img src="img/DeathStar1.png" alt="Death Star">
+                    <div>
+                        <strong>Death Star Recruitment</strong>
+                        <p>Venha fazer parte do maior projeto do Império!</p>
+                        <a href="#" class="promoted-link">Saiba mais</a>
+                    </div>
+                </div>
+                <div class="promoted-item">
+                    <img src="img/Sithholocron2.png" alt="Sith Holocron">
+                    <div>
+                        <strong>Sith Holocron</strong>
+                        <p>Conheça os segredos do lado sombrio da Força.</p>
+                        <a href="#" class="promoted-link">Descubra</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
