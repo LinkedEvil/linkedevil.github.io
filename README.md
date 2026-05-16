@@ -3,4 +3,4 @@ The Linked Evil Site
 
 # Metas
 ## Metas rápidas
-nova
+Update to English site
