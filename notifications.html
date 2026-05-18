@@ -16,33 +16,31 @@
 <div id="navBar"></div>
 
 <div class="notifications-page">
-  <!-- Cabeçalho -->
   <div class="notifications-header">
-    <h1>Notificações</h1>
+    <h1 data-i18n="notifications.title">Notificações</h1>
     <div class="notifications-header-actions">
-      <button class="btn-secondary" style="font-size:14px;padding:6px 16px" onclick="markAllRead()">
+      <button class="btn-secondary" style="font-size:14px;padding:6px 16px" onclick="markAllRead()" data-i18n="notifications.markAll">
         Marcar todas como lidas
       </button>
       <button class="btn-tertiary" style="font-size:14px;padding:6px 16px" title="Configurações">⚙️</button>
     </div>
   </div>
 
-  <!-- Filtros -->
   <div class="notification-tabs">
-    <div class="notification-tab active"       data-filter="all">Todas</div>
-    <div class="notification-tab"              data-filter="like">Recomendações</div>
-    <div class="notification-tab"              data-filter="mention">Menções</div>
-    <div class="notification-tab"              data-filter="birthday">Aniversários</div>
+    <div class="notification-tab active" data-filter="all" data-i18n="notifications.all">Todas</div>
+    <div class="notification-tab"        data-filter="like" data-i18n="notifications.likes">Recomendações</div>
+    <div class="notification-tab"        data-filter="mention" data-i18n="notifications.mentions">Menções</div>
+    <div class="notification-tab"        data-filter="birthday" data-i18n="notifications.birthdays">Aniversários</div>
   </div>
 
-  <!-- Lista renderizada por notifications.js -->
   <div id="notificationsList"></div>
 
   <div id="notificationsFooter"></div>
 </div>
 
+<!-- Botão de paródia -->
 <div class="dark-mode-toggle">
-  <button onclick="App.toggleDarkMode()" title="Modo Evil">😈</button>
+  <button onclick="App.openParodyModal()" data-i18n-title="evil.title" title="Aviso de Paródia">😈</button>
 </div>
 
 <script src="js/data.js"></script>

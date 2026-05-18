@@ -18,11 +18,11 @@ function renderInvitations() {
         <div class="invitation-info">
           <a class="invitation-name" href="profile.html?id=${u.id}">${u.name}</a>
           <div class="invitation-desc">${u.headline.split('|')[0]}</div>
-          <div class="invitation-time">${inv.time} · ${inv.mutual} conexões em comum</div>
+          <div class="invitation-time">${inv.time} · ${inv.mutual} ${App.t('network.mutualConnections')}</div>
         </div>
         <div class="invitation-actions">
-          <button class="btn-accept" onclick="acceptInvitation('${u.id}', this)">Confirmar</button>
-          <button class="btn-ignore" onclick="ignoreInvitation('${u.id}')">Ignorar</button>
+          <button class="btn-accept" onclick="acceptInvitation('${u.id}', this)">${App.t('network.confirm')}</button>
+          <button class="btn-ignore" onclick="ignoreInvitation('${u.id}')">${App.t('network.ignore')}</button>
         </div>
       </div>`;
   }).join('');
@@ -39,7 +39,7 @@ function renderConnections() {
         <div class="network-card-name">${u.name}</div>
         <div class="network-card-desc">${u.headline.split('|')[0]}</div>
         <div class="network-card-action">
-          <button class="btn-connect" onclick="App.connectUser(this)">+ Conectar</button>
+          <button class="btn-connect" onclick="App.connectUser(this)">${App.t('network.connect')}</button>
         </div>
       </div>`).join('');
 }
@@ -47,7 +47,7 @@ function renderConnections() {
 function acceptInvitation(userId, btn) {
   const item = document.getElementById(`inv-${userId}`);
   item.style.background = '#f0fff0';
-  btn.textContent = '✓ Conectado';
+  btn.textContent = App.t('network.connected');
   btn.style.background = '#4caf50';
   btn.disabled = true;
   btn.nextElementSibling.style.display = 'none';

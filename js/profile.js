@@ -15,46 +15,39 @@ function renderProfile(userId) {
 
   const isOwner = userId === AppData.currentUserId;
 
-  /* Banner */
   document.getElementById('profileBanner').style.background = user.bannerGradient;
 
-  /* Avatar */
   const avatar = document.getElementById('profileAvatar');
   avatar.textContent = user.initials;
   avatar.style.background = user.avatarColor;
 
-  /* Nome e headline */
   document.getElementById('profileName').textContent = user.name;
   document.getElementById('profileTagline').textContent = user.headline;
   document.getElementById('profileLocation').innerHTML =
     `${user.location} · <a href="#">${user.connectionText}</a>`;
   document.getElementById('profileConnections').textContent = `👥 ${user.connectionText}`;
 
-  /* Aberto a (só para o dono) */
   const openToSection = document.getElementById('profileOpenTo');
   if (isOwner && user.openTo) {
     openToSection.innerHTML = `
       <div class="profile-open-to">
-        <h4>Aberto a</h4>
+        <h4>${App.t('profile.openTo')}</h4>
         <p>${user.openTo}</p>
       </div>`;
   } else {
     openToSection.innerHTML = '';
   }
 
-  /* Botões de ação */
   document.getElementById('profileActions').innerHTML = isOwner
-    ? `<button class="btn-primary">✏️ Editar perfil</button>
-       <button class="btn-tertiary">Mais ▾</button>`
-    : `<button class="btn-primary">😈 Recomendar</button>
-       <button class="btn-secondary" onclick="App.connectUser(this)">+ Conectar</button>
-       <button class="btn-tertiary">💬 Mensagem</button>
-       <button class="btn-tertiary">Mais ▾</button>`;
+    ? `<button class="btn-primary">${App.t('profile.editProfile')}</button>
+       <button class="btn-tertiary">${App.t('profile.more')}</button>`
+    : `<button class="btn-primary">${App.t('profile.recommend')}</button>
+       <button class="btn-secondary" onclick="App.connectUser(this)">${App.t('profile.connect')}</button>
+       <button class="btn-tertiary">${App.t('profile.message')}</button>
+       <button class="btn-tertiary">${App.t('profile.more')}</button>`;
 
-  /* Sobre */
   document.getElementById('profileSummary').textContent = user.summary;
 
-  /* Experiência */
   document.getElementById('profileExperience').innerHTML = user.experience.map(exp => `
     <div class="experience-item">
       <div class="experience-logo">${exp.logo}</div>
@@ -66,7 +59,6 @@ function renderProfile(userId) {
       </div>
     </div>`).join('');
 
-  /* Formação */
   document.getElementById('profileEducation').innerHTML = user.education.map(edu => `
     <div class="education-item">
       <div class="education-logo">${edu.logo}</div>
@@ -77,7 +69,6 @@ function renderProfile(userId) {
       </div>
     </div>`).join('');
 
-  /* Competências */
   document.getElementById('profileSkills').innerHTML =
     `<div class="skills-grid">` +
     user.skills.map(s => `<span class="skill-tag">${s}</span>`).join('') +

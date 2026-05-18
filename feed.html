@@ -15,44 +15,37 @@
 </head>
 <body>
 
-<!-- Navegação injetada por app.js -->
 <div id="navBar"></div>
 
-<!-- Layout principal -->
 <div class="main-container">
 
-  <!-- Sidebar esquerda (perfil do usuário) -->
   <div class="sidebar-left" id="leftSidebar"></div>
 
-  <!-- Feed central -->
   <div class="feed">
-    <!-- Criador de post -->
     <div class="post-creator">
       <div class="post-creator-top">
         <div class="post-creator-avatar" id="creatorAvatar">LM</div>
-        <div class="post-creator-input" onclick="openPostModal()">Começar publicação</div>
+        <div class="post-creator-input" onclick="openPostModal()" data-i18n="feed.startPost">Começar publicação</div>
       </div>
       <div class="post-creator-actions">
         <button class="post-creator-action" onclick="openPostModal()">
-          <span class="icon-media">📷</span> Mídia
+          <span class="icon-media">📷</span> <span data-i18n="feed.media">Mídia</span>
         </button>
         <button class="post-creator-action" onclick="openPostModal()">
-          <span class="icon-event">📅</span> Evento
+          <span class="icon-event">📅</span> <span data-i18n="feed.event">Evento</span>
         </button>
         <button class="post-creator-action" onclick="openPostModal()">
-          <span class="icon-article">📝</span> Artigo
+          <span class="icon-article">📝</span> <span data-i18n="feed.article">Artigo</span>
         </button>
       </div>
     </div>
 
-    <!-- Posts renderizados por feed.js -->
     <div id="feedPosts"></div>
   </div>
 
-  <!-- Sidebar direita -->
   <div class="sidebar-right">
     <div class="sidebar-widget">
-      <div class="widget-header"><h3>LinkedEvil Notícias</h3></div>
+      <div class="widget-header"><h3 data-i18n="feed.news">LinkedEvil Notícias</h3></div>
       <div class="news-item">
         <div class="news-item-title"><span class="news-dot"></span>Novo recorde de almas coletadas no Q4</div>
         <div class="news-item-meta">há 2h · 15.432 leitores</div>
@@ -73,17 +66,17 @@
         <div class="news-item-title"><span class="news-dot"></span>Top 10 CEOs mais temidos do mercado</div>
         <div class="news-item-meta">há 12h · 66.600 leitores</div>
       </div>
-      <div class="widget-footer"><a href="#">Ver mais notícias ▾</a></div>
+      <div class="widget-footer"><a href="#" data-i18n="feed.moreNews">Ver mais notícias ▾</a></div>
     </div>
 
     <div class="sidebar-widget">
-      <div class="widget-header"><h3>Pessoas que você pode corromper</h3></div>
+      <div class="widget-header"><h3 data-i18n="feed.corrupt">Pessoas que você pode corromper</h3></div>
       <div id="suggestionsContainer"></div>
     </div>
 
     <div class="sidebar-widget">
       <div class="ad-card">
-        <div class="ad-label">Anúncio</div>
+        <div class="ad-label" data-i18n="feed.ad">Anúncio</div>
         <ins class="adsbygoogle"
              style="display:block;width:100%;min-height:250px;"
              data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
@@ -101,17 +94,18 @@
 <div id="postModal" class="modal-overlay hidden">
   <div class="post-modal">
     <div class="post-modal-header">
-      <h2>Criar publicação</h2>
+      <h2 data-i18n="feed.createPost">Criar publicação</h2>
       <button class="post-modal-close" onclick="closePostModal()">✕</button>
     </div>
     <div class="post-modal-author">
       <div class="post-modal-avatar" id="modalAvatar">LM</div>
       <div>
         <div class="post-modal-author-name" id="modalAuthorName">Lucifer Morningstar</div>
-        <button class="post-modal-author-btn">🌐 Qualquer pessoa ▾</button>
+        <button class="post-modal-author-btn" data-i18n="feed.anyone">🌐 Qualquer pessoa ▾</button>
       </div>
     </div>
     <textarea class="post-modal-textarea" id="postTextarea"
+      data-i18n-placeholder="feed.chaosPlaceholder"
       placeholder="Sobre o que você quer espalhar o caos?"
       oninput="togglePostButton()"></textarea>
     <div class="post-modal-footer">
@@ -123,14 +117,14 @@
         <button class="post-modal-tool" title="Enquete">📊</button>
         <button class="post-modal-tool" title="Mais">➕</button>
       </div>
-      <button class="post-modal-submit" id="postSubmitBtn" disabled onclick="submitPost()">Publicar</button>
+      <button class="post-modal-submit" id="postSubmitBtn" disabled onclick="submitPost()" data-i18n="feed.publish">Publicar</button>
     </div>
   </div>
 </div>
 
-<!-- Toggle de modo evil -->
+<!-- Botão de paródia -->
 <div class="dark-mode-toggle">
-  <button onclick="App.toggleDarkMode()" title="Modo Evil">😈</button>
+  <button onclick="App.openParodyModal()" data-i18n-title="evil.title" title="Aviso de Paródia">😈</button>
 </div>
 
 <script src="js/data.js"></script>

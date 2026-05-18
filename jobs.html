@@ -17,23 +17,26 @@
 
 <div class="jobs-page">
   <div class="jobs-header">
-    <h1>Vagas de Emprego</h1>
+    <h1 data-i18n="jobs.title">Vagas de Emprego</h1>
     <div class="jobs-search">
-      <input type="text" id="jobSearch" placeholder="Cargo, empresa ou habilidade..."
+      <input type="text" id="jobSearch"
+        data-i18n-placeholder="jobs.placeholder"
+        placeholder="Cargo, empresa ou habilidade..."
         oninput="searchJobs()" onkeypress="if(event.key==='Enter') searchJobs()">
-      <input type="text" placeholder="Localização">
-      <button onclick="searchJobs()">Pesquisar</button>
+      <input type="text" data-i18n-placeholder="jobs.location" placeholder="Localização">
+      <button onclick="searchJobs()" data-i18n="jobs.search">Pesquisar</button>
     </div>
   </div>
 
-  <p class="jobs-list-title">Recomendadas para você</p>
+  <p class="jobs-list-title" data-i18n="jobs.recommended">Recomendadas para você</p>
   <div id="jobsList"></div>
 
   <div id="jobsFooter"></div>
 </div>
 
+<!-- Botão de paródia -->
 <div class="dark-mode-toggle">
-  <button onclick="App.toggleDarkMode()" title="Modo Evil">😈</button>
+  <button onclick="App.openParodyModal()" data-i18n-title="evil.title" title="Aviso de Paródia">😈</button>
 </div>
 
 <script src="js/data.js"></script>
