@@ -1,0 +1,72 @@
+/* ============================================================
+   JOBS PAGE
+   ============================================================ */
+.jobs-page {
+  max-width: 1128px;
+  margin: 24px auto;
+  padding: 0 8px;
+}
+
+.jobs-header {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px var(--border);
+  padding: 24px;
+  margin-bottom: 8px;
+}
+.jobs-header h1 { font-size: 24px; color: #333; }
+
+.jobs-search {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+.jobs-search input {
+  flex: 1;
+  padding: 10px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px; outline: none;
+}
+.jobs-search input:focus { border-color: var(--red); }
+.jobs-search button {
+  padding: 10px 24px;
+  background: var(--red); color: #fff;
+  border: none; border-radius: 4px;
+  font-size: 14px; font-weight: 600;
+  cursor: pointer;
+}
+.jobs-search button:hover { background: var(--red-dark); }
+
+.jobs-list-title { font-size: 16px; color: #333; margin: 16px 0 8px; font-weight: 600; }
+
+.job-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px var(--border);
+  padding: 20px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+.job-card:hover { box-shadow: 0 0 0 2px rgba(255,26,26,0.3); }
+
+.job-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.job-card h3 { font-size: 16px; color: var(--red); cursor: pointer; }
+.job-card h3:hover { text-decoration: underline; }
+
+.bookmark {
+  font-size: 20px; cursor: pointer;
+  color: #666; background: none; border: none;
+}
+.bookmark:hover { color: var(--red); }
+
+.job-company  { font-size: 14px; color: #333; margin-top: 4px; }
+.job-location { font-size: 14px; color: #666; margin-top: 2px; }
+.job-time     { font-size: 12px; color: #999; margin-top: 8px; }
+.job-match    { font-size: 12px; color: var(--red); font-weight: 600; margin-top: 8px; }
+.job-skills   { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
