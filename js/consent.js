@@ -80,7 +80,7 @@ function injectBanner() {
   banner.innerHTML = `
     <div class="consent-text">
       ${t('consent.text',
-        '<strong>LinkedEvil</strong> usa cookies para exibir publicidade personalizada via <strong>Google AdSense</strong> e melhorar sua experiência. Ao continuar, você concorda com nossa <a href="#">Política de Privacidade</a> e com o uso de cookies.'
+        '<strong>LinkedEvil</strong> usa cookies para exibir publicidade personalizada via <strong>Google AdSense</strong> e melhorar sua experiência. Ao continuar, você concorda com nossa <a href="privacy.html">Política de Privacidade</a> e com o uso de cookies.'
       )}
     </div>
     <div class="consent-actions">
