@@ -99,6 +99,9 @@ const translations = {
 <p class="parody-contact"><a href="mailto:linkedevil@gmail.com">📧 linkedevil@gmail.com</a></p>`,
     'parody.close': '😈 Entendido!',
     'evil.title': 'Aviso de Paródia',
+    'consent.text': '<strong>LinkedEvil</strong> usa cookies para exibir publicidade personalizada via <strong>Google AdSense</strong> e melhorar sua experiência. Ao continuar, você concorda com nossa <a href="#">Política de Privacidade</a> e com o uso de cookies.',
+    'consent.decline': 'Recusar',
+    'consent.accept': 'Aceitar cookies',
   },
   en: {
     'nav.search': 'Search LinkedEvil...',
@@ -194,6 +197,9 @@ const translations = {
 <p class="parody-contact"><a href="mailto:linkedevil@gmail.com">📧 linkedevil@gmail.com</a></p>`,
     'parody.close': '😈 Got it!',
     'evil.title': 'Parody Disclaimer',
+    'consent.text': '<strong>LinkedEvil</strong> uses cookies to display personalized ads via <strong>Google AdSense</strong> and improve your experience. By continuing, you agree to our <a href="#">Privacy Policy</a> and use of cookies.',
+    'consent.decline': 'Decline',
+    'consent.accept': 'Accept cookies',
   }
 };
 
