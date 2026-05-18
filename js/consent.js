@@ -5,8 +5,7 @@
  */
 
 const CONSENT_KEY = 'linkedevil_cookie_consent';
-// Replace with your actual AdSense publisher ID before going live:
-const ADSENSE_CLIENT = 'ca-pub-XXXXXXXXXXXXXXXXX';
+const ADSENSE_CLIENT = 'ca-pub-2855595619421919';
 
 function loadAdSense() {
   if (document.getElementById('adsense-script')) return;
