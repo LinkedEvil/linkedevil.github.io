@@ -18,24 +18,24 @@
 <div class="messaging-page">
   <div class="messaging-container">
 
-    <!-- Sidebar de conversas -->
     <div class="messaging-sidebar">
       <div class="messaging-sidebar-header">
-        <h3>Mensagens</h3>
-        <button title="Nova mensagem">✏️</button>
+        <h3 data-i18n="messaging.title">Mensagens</h3>
+        <button data-i18n-title="messaging.newMsg" title="Nova mensagem">✏️</button>
       </div>
       <div class="messaging-search">
-        <input type="text" placeholder="Pesquisar mensagens...">
+        <input type="text" data-i18n-placeholder="messaging.searchPlaceholder" placeholder="Pesquisar mensagens...">
       </div>
       <div class="messaging-list" id="messagingList"></div>
     </div>
 
-    <!-- Painel de chat -->
     <div class="messaging-chat">
       <div class="messaging-chat-header" id="chatHeader"></div>
       <div class="messaging-chat-messages" id="chatMessages"></div>
       <div class="messaging-chat-input">
-        <input type="text" id="messageInput" placeholder="Escreva uma mensagem..."
+        <input type="text" id="messageInput"
+          data-i18n-placeholder="messaging.inputPlaceholder"
+          placeholder="Escreva uma mensagem..."
           onkeypress="sendOnEnter(event)">
         <button onclick="sendMessage()" title="Enviar">📤</button>
       </div>
@@ -44,8 +44,9 @@
   </div>
 </div>
 
+<!-- Botão de paródia -->
 <div class="dark-mode-toggle">
-  <button onclick="App.toggleDarkMode()" title="Modo Evil">😈</button>
+  <button onclick="App.openParodyModal()" data-i18n-title="evil.title" title="Aviso de Paródia">😈</button>
 </div>
 
 <script src="js/data.js"></script>

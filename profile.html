@@ -16,10 +16,8 @@
 <div id="navBar"></div>
 
 <div class="profile-page">
-  <!-- Banner -->
   <div class="profile-banner" id="profileBanner"></div>
 
-  <!-- Card principal -->
   <div class="profile-main-card">
     <div class="profile-avatar-large" id="profileAvatar"></div>
     <div class="profile-name-section">
@@ -34,35 +32,32 @@
     <div id="profileOpenTo"></div>
   </div>
 
-  <!-- Sobre -->
   <div class="profile-section">
-    <h2>Sobre</h2>
+    <h2 data-i18n="profile.about">Sobre</h2>
     <p id="profileSummary"></p>
   </div>
 
-  <!-- Experiência -->
   <div class="profile-section">
-    <h2>Experiência</h2>
+    <h2 data-i18n="profile.experience">Experiência</h2>
     <div id="profileExperience"></div>
   </div>
 
-  <!-- Formação -->
   <div class="profile-section">
-    <h2>Formação acadêmica</h2>
+    <h2 data-i18n="profile.education">Formação acadêmica</h2>
     <div id="profileEducation"></div>
   </div>
 
-  <!-- Competências -->
   <div class="profile-section">
-    <h2>Competências</h2>
+    <h2 data-i18n="profile.skills">Competências</h2>
     <div id="profileSkills"></div>
   </div>
 
   <div id="profileFooter"></div>
 </div>
 
+<!-- Botão de paródia -->
 <div class="dark-mode-toggle">
-  <button onclick="App.toggleDarkMode()" title="Modo Evil">😈</button>
+  <button onclick="App.openParodyModal()" data-i18n-title="evil.title" title="Aviso de Paródia">😈</button>
 </div>
 
 <script src="js/data.js"></script>

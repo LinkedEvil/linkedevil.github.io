@@ -110,6 +110,25 @@
   font-weight: 600;
 }
 
+.nav-lang-toggle {
+  margin-left: 4px;
+  padding: 4px 10px;
+  background: transparent;
+  color: var(--red);
+  border: 1.5px solid var(--red);
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+.nav-lang-toggle:hover {
+  background: var(--red);
+  color: #fff;
+}
+
 @media (max-width: 960px) {
   .nav-search input { width: 160px; }
 }
@@ -117,4 +136,5 @@
   .nav-search { display: none; }
   .nav-item-label { display: none; }
   .nav-item { min-width: 56px; padding: 0 8px; }
+  .nav-lang-toggle { padding: 4px 7px; font-size: 11px; }
 }

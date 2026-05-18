@@ -40,7 +40,7 @@ function renderChat(userId) {
     <div>
       <div class="messaging-chat-header-name">${u.name}</div>
       <div class="messaging-chat-header-status ${data.online ? '' : 'offline'}">
-        ${data.online ? 'Online' : 'Offline'}
+        ${data.online ? App.t('messaging.online') : App.t('messaging.offline')}
       </div>
     </div>`;
 
@@ -65,7 +65,7 @@ function sendMessage() {
   AppData.messages[currentChat].messages.push({
     from: AppData.currentUserId,
     text,
-    time: new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })
+    time: new Date().toLocaleTimeString(App.getLang() === 'en' ? 'en-US' : 'pt-BR', { hour: '2-digit', minute: '2-digit' })
   });
 
   input.value = '';

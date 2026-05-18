@@ -16,32 +16,30 @@
 <div id="navBar"></div>
 
 <div class="network-page">
-  <!-- Cabeçalho com tabs -->
   <div class="network-header">
-    <h1>Sua Rede</h1>
+    <h1 data-i18n="network.title">Sua Rede</h1>
     <div class="network-tabs">
-      <div class="network-tab active">Conexões</div>
-      <div class="network-tab">Contatos</div>
-      <div class="network-tab">Páginas</div>
-      <div class="network-tab">Grupos</div>
+      <div class="network-tab active" data-i18n="network.connections">Conexões</div>
+      <div class="network-tab" data-i18n="network.contacts">Contatos</div>
+      <div class="network-tab" data-i18n="network.pages">Páginas</div>
+      <div class="network-tab" data-i18n="network.groups">Grupos</div>
     </div>
   </div>
 
-  <!-- Convites pendentes -->
   <div class="invitations-section">
-    <p class="invitations-title" id="invitationsTitle">Convites pendentes</p>
+    <p class="invitations-title" id="invitationsTitle" data-i18n="network.pending">Convites pendentes</p>
     <div id="invitationsContainer"></div>
   </div>
 
-  <!-- Grid de conexões -->
-  <p class="connections-title">Conexões</p>
+  <p class="connections-title" data-i18n="network.connectionsTitle">Conexões</p>
   <div class="network-grid" id="connectionsGrid"></div>
 
   <div id="networkFooter"></div>
 </div>
 
+<!-- Botão de paródia -->
 <div class="dark-mode-toggle">
-  <button onclick="App.toggleDarkMode()" title="Modo Evil">😈</button>
+  <button onclick="App.openParodyModal()" data-i18n-title="evil.title" title="Aviso de Paródia">😈</button>
 </div>
 
 <script src="js/data.js"></script>

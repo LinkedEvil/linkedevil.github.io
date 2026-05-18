@@ -2,14 +2,11 @@
  * feed.js — lógica da página de feed (feed.html).
  */
 
-/* Posts criados pelo usuário na sessão atual */
 let userPosts = [];
 
-/* ---- Inicialização ---- */
 document.addEventListener('DOMContentLoaded', () => {
   const u = App.currentUser();
 
-  /* Preenche avatares estáticos do feed */
   const creatorAvatar = document.getElementById('creatorAvatar');
   if (creatorAvatar) {
     creatorAvatar.textContent = u.initials;
@@ -29,14 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
   App.renderFooter('rightFooter');
 });
 
-/* ---- Render ---- */
 function renderFeed() {
   const container = document.getElementById('feedPosts');
   const allPosts = [
     ...userPosts.map(p => ({ ...p, _isNew: true })),
     ...AppData.posts
   ];
-
   container.innerHTML = allPosts.map(post => buildPostHtml(post)).join('');
 }
 
@@ -84,28 +79,28 @@ function buildPostHtml(post) {
           </div>
           <span>${App.fmtNum(totalReactions)}</span>
         </div>
-        <div class="post-comments-count">${post.comments.length} comentários · ${App.fmtNum(post.shares)} compartilhamentos</div>
+        <div class="post-comments-count">${post.comments.length} ${App.t('feed.comments')} · ${App.fmtNum(post.shares)} ${App.t('feed.shares')}</div>
       </div>
       <div class="post-actions">
         <button class="post-action-btn" onclick="toggleLike(this)">
-          <span class="action-icon">😈</span> Recomendar
+          <span class="action-icon">😈</span> ${App.t('feed.recommend')}
         </button>
         <button class="post-action-btn" onclick="toggleComments(this)">
-          <span class="action-icon">💬</span> Comentar
+          <span class="action-icon">💬</span> ${App.t('feed.comment')}
         </button>
         <button class="post-action-btn">
-          <span class="action-icon">🔄</span> Compartilhar
+          <span class="action-icon">🔄</span> ${App.t('feed.share')}
         </button>
         <button class="post-action-btn">
-          <span class="action-icon">📤</span> Enviar
+          <span class="action-icon">📤</span> ${App.t('feed.send')}
         </button>
       </div>
       <div class="comments-section">
         ${commentsHtml}
         <div class="comment-input-wrapper">
           <div class="comment-avatar" style="background:#ff1a1a;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:600;flex-shrink:0">${App.currentUser().initials}</div>
-          <input type="text" placeholder="Adicionar comentário..." onkeypress="addCommentKey(event, this)">
-          <button onclick="addCommentBtn(this)">Comentar</button>
+          <input type="text" placeholder="${App.t('feed.addComment')}" onkeypress="addCommentKey(event, this)">
+          <button onclick="addCommentBtn(this)">${App.t('feed.comment')}</button>
         </div>
       </div>
     </div>`;
@@ -125,7 +120,7 @@ function renderSuggestions() {
           <div class="suggestion-name">${u.name}</div>
           <div class="suggestion-desc">${u.headline.split('|')[0]}</div>
         </div>
-        <button class="btn-connect" onclick="App.connectUser(this)">+ Conectar</button>
+        <button class="btn-connect" onclick="App.connectUser(this)">${App.t('feed.connect')}</button>
       </div>`;
   }).join('');
 }
@@ -154,7 +149,7 @@ function submitPost() {
   userPosts.unshift({
     id: Date.now(),
     author: AppData.currentUserId,
-    time: 'agora',
+    time: App.t('feed.now'),
     content: text,
     image: null,
     reactions: { '😈': 0, '🔥': 0, '👏': 0 },
@@ -173,8 +168,8 @@ function toggleLike(btn) {
   icon.classList.add('like-animation');
   setTimeout(() => icon.classList.remove('like-animation'), 300);
   btn.innerHTML = btn.classList.contains('liked')
-    ? '<span class="action-icon">😈</span> Recomendado'
-    : '<span class="action-icon">😈</span> Recomendar';
+    ? `<span class="action-icon">😈</span> ${App.t('feed.recommended')}`
+    : `<span class="action-icon">😈</span> ${App.t('feed.recommend')}`;
 }
 
 function toggleComments(btn) {

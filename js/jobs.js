@@ -16,12 +16,12 @@ function renderJobs(jobs) {
           <div class="job-company">${job.company}</div>
           <div class="job-location">📍 ${job.location}</div>
           <div class="job-time">🕐 ${job.time}</div>
-          <div class="job-match">✅ ${job.match} de compatibilidade</div>
+          <div class="job-match">✅ ${job.match} ${App.t('jobs.match')}</div>
           <div class="job-skills">
             ${job.skills.map(s => `<span class="skill-tag">${s}</span>`).join('')}
           </div>
         </div>
-        <button class="bookmark" onclick="toggleBookmark(this)" title="Salvar vaga">🔖</button>
+        <button class="bookmark" onclick="toggleBookmark(this)" data-i18n-title="jobs.save" title="${App.t('jobs.save')}">🔖</button>
       </div>
     </div>`).join('');
 }
