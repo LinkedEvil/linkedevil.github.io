@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <base href="../">
+  <meta name="google-adsense-account" content="ca-pub-2855595619421919">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9REW3CCSJQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage:       'denied',
+      ad_storage:              'denied',
+      ad_user_data:            'denied',
+      ad_personalization:      'denied',
+      functionality_storage:   'denied',
+      personalization_storage: 'denied',
+      security_storage:        'granted',
+      wait_for_update:         2000
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-9REW3CCSJQ');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedEvil — Perfil</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <link rel="stylesheet" href="css/consent.css">
+</head>
+<body>
+
+<div id="navBar"></div>
+
+<div class="profile-page">
+  <div class="profile-banner" id="profileBanner"></div>
+
+  <div class="profile-main-card">
+    <div class="profile-avatar-large" id="profileAvatar"></div>
+    <div class="profile-name-section">
+      <div class="profile-name-left">
+        <h1 id="profileName"></h1>
+        <div class="profile-tagline" id="profileTagline"></div>
+        <div class="profile-location"  id="profileLocation"></div>
+        <div class="profile-connections-info" id="profileConnections"></div>
+      </div>
+      <div class="profile-actions" id="profileActions"></div>
+    </div>
+    <div id="profileOpenTo"></div>
+  </div>
+
+  <div class="profile-section">
+    <h2 data-i18n="profile.about">Sobre</h2>
+    <p id="profileSummary"></p>
+  </div>
+
+  <div class="profile-section">
+    <h2 data-i18n="profile.experience">Experiência</h2>
+    <div id="profileExperience"></div>
+  </div>
+
+  <div class="profile-section">
+    <h2 data-i18n="profile.education">Formação acadêmica</h2>
+    <div id="profileEducation"></div>
+  </div>
+
+  <div class="profile-section">
+    <h2 data-i18n="profile.skills">Competências</h2>
+    <div id="profileSkills"></div>
+  </div>
+
+  <div id="profileFooter"></div>
+</div>
+
+<!-- Botão de paródia -->
+<div class="dark-mode-toggle">
+  <button onclick="App.openParodyModal()" data-i18n-title="evil.title" title="Aviso de Paródia">😈</button>
+</div>
+
+<script>localStorage.setItem("linkedevil_lang","pt");</script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/consent.js"></script>
+<script src="js/profile.js"></script>
+</body>
+</html>
