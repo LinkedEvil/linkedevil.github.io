@@ -222,6 +222,14 @@ const App = {
     location.reload();
   },
 
+  /* Retorna o prefixo de caminho baseado na URL atual (ex: 'en/', 'br/', ou '') */
+  getBasePath() {
+    const parts = location.pathname.split('/');
+    if (parts.includes('en')) return 'en/';
+    if (parts.includes('br')) return 'br/';
+    return '';
+  },
+
   /* Marca o item de nav ativo com base no filename atual */
   setActiveNav() {
     const page = location.pathname.split('/').pop().replace('.html', '') || 'feed';
@@ -330,34 +338,35 @@ const App = {
     const el = document.getElementById('navBar');
     if (!el) return;
     const nextLang = this.getLang() === 'pt' ? 'en' : 'pt';
+    const bp = this.getBasePath();
     el.innerHTML = `
       <nav class="top-nav">
         <div class="nav-inner">
-          <a class="nav-logo" href="feed.html">Linked<span>Evil</span></a>
+          <a class="nav-logo" href="${bp}feed.html">Linked<span>Evil</span></a>
           <div class="nav-search">
             <span class="nav-search-icon">🔍</span>
             <input type="text" placeholder="${this.t('nav.search')}">
           </div>
           <div class="nav-items">
-            <a class="nav-item" data-page="feed" href="feed.html">
+            <a class="nav-item" data-page="feed" href="${bp}feed.html">
               <span class="nav-item-icon">🏠</span><span class="nav-item-label">${this.t('nav.home')}</span>
             </a>
-            <a class="nav-item" data-page="network" href="network.html">
+            <a class="nav-item" data-page="network" href="${bp}network.html">
               <span class="nav-item-icon">👥</span><span class="nav-item-label">${this.t('nav.network')}</span>
               <span class="badge">3</span>
             </a>
-            <a class="nav-item" data-page="jobs" href="jobs.html">
+            <a class="nav-item" data-page="jobs" href="${bp}jobs.html">
               <span class="nav-item-icon">💼</span><span class="nav-item-label">${this.t('nav.jobs')}</span>
             </a>
-            <a class="nav-item" data-page="messaging" href="messaging.html">
+            <a class="nav-item" data-page="messaging" href="${bp}messaging.html">
               <span class="nav-item-icon">💬</span><span class="nav-item-label">${this.t('nav.messages')}</span>
               <span class="badge">5</span>
             </a>
-            <a class="nav-item" data-page="notifications" href="notifications.html">
+            <a class="nav-item" data-page="notifications" href="${bp}notifications.html">
               <span class="nav-item-icon">🔔</span><span class="nav-item-label">${this.t('nav.notifications')}</span>
               <span class="badge">12</span>
             </a>
-            <a class="nav-item" data-page="profile" href="profile.html">
+            <a class="nav-item" data-page="profile" href="${bp}profile.html">
               <div class="nav-profile-pic">${u.initials}</div>
               <span class="nav-item-label">${this.t('nav.me')}</span>
             </a>

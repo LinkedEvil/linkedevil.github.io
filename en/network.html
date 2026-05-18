@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <base href="../">
+  <meta name="google-adsense-account" content="ca-pub-2855595619421919">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9REW3CCSJQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage:       'denied',
+      ad_storage:              'denied',
+      ad_user_data:            'denied',
+      ad_personalization:      'denied',
+      functionality_storage:   'denied',
+      personalization_storage: 'denied',
+      security_storage:        'granted',
+      wait_for_update:         2000
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-9REW3CCSJQ');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedEvil — Minha Rede</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/network.css">
+  <link rel="stylesheet" href="css/consent.css">
+</head>
+<body>
+
+<div id="navBar"></div>
+
+<div class="network-page">
+  <div class="network-header">
+    <h1 data-i18n="network.title">Sua Rede</h1>
+    <div class="network-tabs">
+      <div class="network-tab active" data-i18n="network.connections">Conexões</div>
+      <div class="network-tab" data-i18n="network.contacts">Contatos</div>
+      <div class="network-tab" data-i18n="network.pages">Páginas</div>
+      <div class="network-tab" data-i18n="network.groups">Grupos</div>
+    </div>
+  </div>
+
+  <div class="invitations-section">
+    <p class="invitations-title" id="invitationsTitle" data-i18n="network.pending">Convites pendentes</p>
+    <div id="invitationsContainer"></div>
+  </div>
+
+  <p class="connections-title" data-i18n="network.connectionsTitle">Conexões</p>
+  <div class="network-grid" id="connectionsGrid"></div>
+
+  <div id="networkFooter"></div>
+</div>
+
+<!-- Botão de paródia -->
+<div class="dark-mode-toggle">
+  <button onclick="App.openParodyModal()" data-i18n-title="evil.title" title="Aviso de Paródia">😈</button>
+</div>
+
+<script>localStorage.setItem("linkedevil_lang","en");</script>
+<script src="js/data-en.js"></script>
+<script src="js/app.js"></script>
+<script src="js/consent.js"></script>
+<script src="js/network.js"></script>
+</body>
+</html>

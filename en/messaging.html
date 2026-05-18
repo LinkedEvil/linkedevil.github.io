@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <base href="../">
+  <meta name="google-adsense-account" content="ca-pub-2855595619421919">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9REW3CCSJQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage:       'denied',
+      ad_storage:              'denied',
+      ad_user_data:            'denied',
+      ad_personalization:      'denied',
+      functionality_storage:   'denied',
+      personalization_storage: 'denied',
+      security_storage:        'granted',
+      wait_for_update:         2000
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-9REW3CCSJQ');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedEvil — Mensagens</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/messaging.css">
+  <link rel="stylesheet" href="css/consent.css">
+</head>
+<body>
+
+<div id="navBar"></div>
+
+<div class="messaging-page">
+  <div class="messaging-container">
+
+    <div class="messaging-sidebar">
+      <div class="messaging-sidebar-header">
+        <h3 data-i18n="messaging.title">Mensagens</h3>
+        <button data-i18n-title="messaging.newMsg" title="Nova mensagem">✏️</button>
+      </div>
+      <div class="messaging-search">
+        <input type="text" data-i18n-placeholder="messaging.searchPlaceholder" placeholder="Pesquisar mensagens...">
+      </div>
+      <div class="messaging-list" id="messagingList"></div>
+    </div>
+
+    <div class="messaging-chat">
+      <div class="messaging-chat-header" id="chatHeader"></div>
+      <div class="messaging-chat-messages" id="chatMessages"></div>
+      <div class="messaging-chat-input">
+        <input type="text" id="messageInput"
+          data-i18n-placeholder="messaging.inputPlaceholder"
+          placeholder="Escreva uma mensagem..."
+          onkeypress="sendOnEnter(event)">
+        <button onclick="sendMessage()" title="Enviar">📤</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Botão de paródia -->
+<div class="dark-mode-toggle">
+  <button onclick="App.openParodyModal()" data-i18n-title="evil.title" title="Aviso de Paródia">😈</button>
+</div>
+
+<script>localStorage.setItem("linkedevil_lang","en");</script>
+<script src="js/data-en.js"></script>
+<script src="js/app.js"></script>
+<script src="js/consent.js"></script>
+<script src="js/messaging.js"></script>
+</body>
+</html>
