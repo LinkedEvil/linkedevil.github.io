@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Gerente de Aquisição de Almas",
+    "company": "EvilCorp",
+    "location": "Inferno, Brasil (Remoto)",
+    "time": "há 2 horas",
+    "match": "95% de compatibilidade",
+    "skills": ["Negociação", "Pactos", "Vendas"],
+    "logo": "😈",
+    "description": "Buscamos profissional experiente para liderar nossa equipe de aquisição de almas. Responsável por fechar pactos com mortais e gerenciar carteira de clientes sobrenaturais."
+  },
+  {
+    "id": 2,
+    "title": "Desenvolvedor InfernoOS Sênior",
+    "company": "EvilCorp",
+    "location": "Inferno, Brasil (Híbrido)",
+    "time": "há 5 horas",
+    "match": "88% de compatibilidade",
+    "skills": ["InfernoOS", "C++ Sombrio", "DevOps Infernal"],
+    "logo": "😈",
+    "description": "Procuramos desenvolvedor sênior para trabalhar no InfernoOS 6.6.6. Experiência com sistemas operacionais demoníacos é obrigatória."
+  },
+  {
+    "id": 3,
+    "title": "Analista de Marketing Enganoso",
+    "company": "EvilCorp",
+    "location": "Asgard (Remoto)",
+    "time": "há 1 dia",
+    "match": "76% de compatibilidade",
+    "skills": ["Growth Hacking", "Engenharia Social", "Copywriting"],
+    "logo": "😈",
+    "description": "Equipe do Loki busca analista criativo para campanhas de marketing enganoso. Taxa de conversão mínima esperada: 80%."
+  },
+  {
+    "id": 4,
+    "title": "Contador de Sangue",
+    "company": "EvilCorp",
+    "location": "Transilvânia (Presencial)",
+    "time": "há 2 dias",
+    "match": "65% de compatibilidade",
+    "skills": ["Contabilidade", "Finanças", "Excel"],
+    "logo": "😈",
+    "description": "Drácula precisa de um contador assistente para gerenciar as finanças noturnas da EvilCorp. Disponibilidade para trabalho noturno é obrigatória."
+  },
+  {
+    "id": 5,
+    "title": "Guardião de Portões Jr.",
+    "company": "EvilCorp",
+    "location": "Portões do Inferno (Presencial)",
+    "time": "há 3 dias",
+    "match": "50% de compatibilidade",
+    "skills": ["Segurança", "Vigilância", "Força Física"],
+    "logo": "😈",
+    "description": "Cerberus está expandindo a equipe de segurança. Buscamos guardiões para os portões do inferno. Ter 3 cabeças é um diferencial, mas não obrigatório."
+  },
+  {
+    "id": 6,
+    "title": "Especialista em RH (Retenção)",
+    "company": "EvilCorp",
+    "location": "Atenas, Grécia (Híbrido)",
+    "time": "há 4 dias",
+    "match": "82% de compatibilidade",
+    "skills": ["RH", "Retenção", "Petrificação"],
+    "logo": "😈",
+    "description": "Medusa busca assistente de RH especializado em retenção de talentos. Experiência com petrificação é um diferencial."
+  }
+]

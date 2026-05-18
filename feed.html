@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedEvil — Início</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/feed.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/consent.css">
+</head>
+<body>
+
+<!-- Navegação injetada por app.js -->
+<div id="navBar"></div>
+
+<!-- Layout principal -->
+<div class="main-container">
+
+  <!-- Sidebar esquerda (perfil do usuário) -->
+  <div class="sidebar-left" id="leftSidebar"></div>
+
+  <!-- Feed central -->
+  <div class="feed">
+    <!-- Criador de post -->
+    <div class="post-creator">
+      <div class="post-creator-top">
+        <div class="post-creator-avatar" id="creatorAvatar">LM</div>
+        <div class="post-creator-input" onclick="openPostModal()">Começar publicação</div>
+      </div>
+      <div class="post-creator-actions">
+        <button class="post-creator-action" onclick="openPostModal()">
+          <span class="icon-media">📷</span> Mídia
+        </button>
+        <button class="post-creator-action" onclick="openPostModal()">
+          <span class="icon-event">📅</span> Evento
+        </button>
+        <button class="post-creator-action" onclick="openPostModal()">
+          <span class="icon-article">📝</span> Artigo
+        </button>
+      </div>
+    </div>
+
+    <!-- Posts renderizados por feed.js -->
+    <div id="feedPosts"></div>
+  </div>
+
+  <!-- Sidebar direita -->
+  <div class="sidebar-right">
+    <div class="sidebar-widget">
+      <div class="widget-header"><h3>LinkedEvil Notícias</h3></div>
+      <div class="news-item">
+        <div class="news-item-title"><span class="news-dot"></span>Novo recorde de almas coletadas no Q4</div>
+        <div class="news-item-meta">há 2h · 15.432 leitores</div>
+      </div>
+      <div class="news-item">
+        <div class="news-item-title"><span class="news-dot"></span>EvilCorp anuncia fusão com Underworld Inc.</div>
+        <div class="news-item-meta">há 4h · 8.901 leitores</div>
+      </div>
+      <div class="news-item">
+        <div class="news-item-title"><span class="news-dot"></span>Tendências de maldade corporativa em 2025</div>
+        <div class="news-item-meta">há 6h · 23.100 leitores</div>
+      </div>
+      <div class="news-item">
+        <div class="news-item-title"><span class="news-dot"></span>Como manipular reuniões com sucesso</div>
+        <div class="news-item-meta">há 8h · 42.000 leitores</div>
+      </div>
+      <div class="news-item">
+        <div class="news-item-title"><span class="news-dot"></span>Top 10 CEOs mais temidos do mercado</div>
+        <div class="news-item-meta">há 12h · 66.600 leitores</div>
+      </div>
+      <div class="widget-footer"><a href="#">Ver mais notícias ▾</a></div>
+    </div>
+
+    <div class="sidebar-widget">
+      <div class="widget-header"><h3>Pessoas que você pode corromper</h3></div>
+      <div id="suggestionsContainer"></div>
+    </div>
+
+    <div class="sidebar-widget">
+      <div class="ad-card">
+        <div class="ad-label">Anúncio</div>
+        <ins class="adsbygoogle"
+             style="display:block;width:100%;min-height:250px;"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="rectangle"
+             data-full-width-responsive="true"></ins>
+      </div>
+    </div>
+
+    <div id="rightFooter"></div>
+  </div>
+</div>
+
+<!-- Modal de publicação -->
+<div id="postModal" class="modal-overlay hidden">
+  <div class="post-modal">
+    <div class="post-modal-header">
+      <h2>Criar publicação</h2>
+      <button class="post-modal-close" onclick="closePostModal()">✕</button>
+    </div>
+    <div class="post-modal-author">
+      <div class="post-modal-avatar" id="modalAvatar">LM</div>
+      <div>
+        <div class="post-modal-author-name" id="modalAuthorName">Lucifer Morningstar</div>
+        <button class="post-modal-author-btn">🌐 Qualquer pessoa ▾</button>
+      </div>
+    </div>
+    <textarea class="post-modal-textarea" id="postTextarea"
+      placeholder="Sobre o que você quer espalhar o caos?"
+      oninput="togglePostButton()"></textarea>
+    <div class="post-modal-footer">
+      <div class="post-modal-tools">
+        <button class="post-modal-tool" title="Imagem">📷</button>
+        <button class="post-modal-tool" title="Vídeo">🎬</button>
+        <button class="post-modal-tool" title="Documento">📄</button>
+        <button class="post-modal-tool" title="Evento">📅</button>
+        <button class="post-modal-tool" title="Enquete">📊</button>
+        <button class="post-modal-tool" title="Mais">➕</button>
+      </div>
+      <button class="post-modal-submit" id="postSubmitBtn" disabled onclick="submitPost()">Publicar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toggle de modo evil -->
+<div class="dark-mode-toggle">
+  <button onclick="App.toggleDarkMode()" title="Modo Evil">😈</button>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/consent.js"></script>
+<script src="js/feed.js"></script>
+</body>
+</html>

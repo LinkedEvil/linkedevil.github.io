@@ -1,0 +1,50 @@
+{
+  "hades_underworld": {
+    "online": true,
+    "messages": [
+      { "from": "hades_underworld",    "text": "E aí, Lucifer! Vi os números do Q4. Impressionante! 🔥", "time": "10:30" },
+      { "from": "lucifer_morningstar", "text": "Obrigado, Hades! A equipe demoníaca está trabalhando muito.", "time": "10:32" },
+      { "from": "hades_underworld",    "text": "Bora fazer aquela fusão EvilCorp + Underworld Inc.? 🤝", "time": "10:35" },
+      { "from": "lucifer_morningstar", "text": "Com certeza! Vou pedir para o Drácula preparar os números.", "time": "10:37" },
+      { "from": "hades_underworld",    "text": "Perfeito! Cerberus está pronto para a cerimônia também 🐕", "time": "10:40" }
+    ]
+  },
+  "loki_trickster": {
+    "online": false,
+    "messages": [
+      { "from": "loki_trickster",      "text": "Chefe, a campanha nova está pronta. 100% de conversão garantida! 😏", "time": "09:00" },
+      { "from": "lucifer_morningstar", "text": "Manda o relatório, Loki.", "time": "09:05" },
+      { "from": "loki_trickster",      "text": "Relatório? Eu sou o Loki. Os números se explicam sozinhos. 😂", "time": "09:07" },
+      { "from": "lucifer_morningstar", "text": "LOKI. MANDA. O. RELATÓRIO.", "time": "09:08" },
+      { "from": "loki_trickster",      "text": "Ok ok... tô mandando. Mas não precisa gritar. 😅", "time": "09:10" }
+    ]
+  },
+  "medusa_corp": {
+    "online": true,
+    "messages": [
+      { "from": "medusa_corp",         "text": "Lucifer, preciso de aprovação para petrificar mais 3 funcionários que pediram demissão.", "time": "14:00" },
+      { "from": "lucifer_morningstar", "text": "Aprovado. Mas só os que assinaram contrato de exclusividade.", "time": "14:05" },
+      { "from": "medusa_corp",         "text": "Todos assinaram. Vou transformar em estátuas de mármore. 🪨", "time": "14:07" },
+      { "from": "lucifer_morningstar", "text": "Perfeito. Coloque no lobby. Impressiona os visitantes.", "time": "14:10" }
+    ]
+  },
+  "dracula_night": {
+    "online": false,
+    "messages": [
+      { "from": "dracula_night",       "text": "Lucifer, o fluxo de caixa está positivo. Mas preciso de mais... sangue. Digo, recursos.", "time": "16:00" },
+      { "from": "lucifer_morningstar", "text": "Drácula, sempre com essas metáforas. Quantos recursos precisa?", "time": "16:05" },
+      { "from": "dracula_night",       "text": "666 milhões. Para o próximo trimestre. 🦇", "time": "16:07" },
+      { "from": "lucifer_morningstar", "text": "Vou autorizar. Mas pare de beber sangue dos estagiários.", "time": "16:10" },
+      { "from": "dracula_night",       "text": "Sem promessas. 😈", "time": "16:12" }
+    ]
+  },
+  "lilith_first": {
+    "online": true,
+    "messages": [
+      { "from": "lilith_first",        "text": "O InfernoOS 6.6.6 está pronto para deploy! 🚀", "time": "11:00" },
+      { "from": "lucifer_morningstar", "text": "Ótimo! Tem algum bug demoníaco?", "time": "11:05" },
+      { "from": "lilith_first",        "text": "Só os intencionais. O firewall agora petrifica tentativas de invasão. 😈", "time": "11:07" },
+      { "from": "lucifer_morningstar", "text": "Genial! Deploy agora!", "time": "11:10" }
+    ]
+  }
+}

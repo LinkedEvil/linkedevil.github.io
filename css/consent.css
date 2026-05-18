@@ -1,0 +1,59 @@
+/* ============================================================
+   COOKIE CONSENT BANNER
+   ============================================================ */
+#cookieConsent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: #fff;
+  border-top: 2px solid #ff1a1a;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.12);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #333;
+  animation: slideUp 0.3s ease;
+}
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+#cookieConsent.hidden { display: none; }
+
+.consent-text { flex: 1; min-width: 260px; line-height: 1.5; }
+.consent-text strong { color: #ff1a1a; }
+.consent-text a { color: #ff1a1a; text-decoration: none; }
+.consent-text a:hover { text-decoration: underline; }
+
+.consent-actions { display: flex; gap: 8px; flex-shrink: 0; }
+
+.btn-consent-accept {
+  padding: 8px 20px;
+  background: #ff1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-consent-accept:hover { background: #e60000; }
+
+.btn-consent-decline {
+  padding: 8px 20px;
+  background: transparent;
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-consent-decline:hover { background: #f5f5f5; border-color: #999; }
